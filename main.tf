@@ -1,5 +1,5 @@
 provider "aws" {
-  region = var.regiao
+  region = "${var.regiao}"
 }
 
 # terraform init - baixar os modulos do terraform baseado nos seus arquivos

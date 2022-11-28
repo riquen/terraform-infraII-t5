@@ -1,5 +1,5 @@
-resource "aws_instance" "nidio_ec2" {
-  count         = 1
+resource "aws_instance" "henrique_ec2" {
+  count         = 2
   ami           = var.ami
   instance_type = var.tipo_instancia
   key_name      = "${var.usuario}-terraform-aws"
@@ -9,7 +9,7 @@ resource "aws_instance" "nidio_ec2" {
   vpc_security_group_ids = [ aws_security_group.sg_acesso_ssh_publico.id, aws_security_group.sg_acesso_web.id ]
 }
 
-resource "aws_instance" "nidio_ec2_ansible" {
+resource "aws_instance" "henrique_ec2_ansible" {
   count         = 1
   ami           = var.ami
   instance_type = var.tipo_instancia
